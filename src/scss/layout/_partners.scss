@@ -1,0 +1,11 @@
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+    img {
+        margin-bottom: 1rem;
+    }
+}

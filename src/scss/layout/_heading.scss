@@ -1,0 +1,74 @@
+.heading {
+    min-height: 100vh;
+    background-image: url('../images/headingBg.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    position: relative;
+
+    @media only screen and (max-width: 750px) {
+        background-image: none;
+        background-image: linear-gradient(to bottom right, #0bb895,#2eb89c, #27528D, #194077) !important;
+        background-size: 150% 150%;
+
+        animation: bgColorChange 5s infinite ease-in-out;
+    }
+    
+    &-title {
+        margin: {
+            top: 22rem;
+            bottom: 6rem;
+        }
+        @media only screen and (max-width: 750px) {
+            margin: {
+                top: 6rem;
+                bottom: 6rem;
+            }
+        }
+
+        @include heading;
+        line-height: 59px;
+        @media only screen and (max-width: 750px) {
+            color: var(--color-text--secondary);
+            text-align: center;
+        }
+    }
+
+    &-text {
+        @include text;
+        line-height: 34px;
+        @media only screen and (max-width: 750px) {
+            color: var(--color-text--secondary);
+            text-align: center;
+        }
+        margin: {
+            bottom: 6rem;
+        }
+    }
+
+    &-button {
+        @media only screen and (max-width: 750px) {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &-scroll {
+        @include text-small;
+        display: inline-block;
+        @media only screen and (max-width: 750px) {
+            color: white;
+        }
+        text-transform: uppercase;
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+        animation: floating 2s infinite ease-in-out;
+
+        @media only screen and (max-width: 417px) {
+            display: none;
+        }
+    }
+}

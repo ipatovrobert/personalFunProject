@@ -1,0 +1,83 @@
+.project {
+    margin: {
+        top: 25rem;
+        bottom: 55rem;
+    }
+    @media only screen and (max-width: 1329px) {
+        margin: {
+            top: 25rem;
+            bottom: 25rem;
+        }
+    }
+    @media only screen and (max-width: 595px) {
+        margin: {
+            top: 10rem;
+            bottom: 10rem;
+        }
+    }
+
+    display: flex;
+
+    @media only screen and (max-width: 1017px) {
+        //display: block;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    &-picture {
+        position: relative;
+        flex-grow: 1;
+        @media only screen and (max-width: 1017px) {
+            margin: {
+                top: 7rem;
+            }
+        }
+
+        .right {
+            position: absolute;
+            right: -200px;
+            width: 50vw;
+
+            @media only screen and (max-width: 1017px) {
+                position: relative;
+                right: 0;
+            }
+        }
+
+        .left {
+            position: absolute;
+            left: -200px;
+            width: 50vw;
+
+            @media only screen and (max-width: 1017px) {
+                position: relative;
+                left: 0;
+            }
+        }
+    }
+    &-title {
+        @include heading;
+        margin: {
+            bottom: 6.4rem;
+        }
+    }
+
+    &-description {
+        @include text;
+        margin: {
+            bottom: 6.4rem;
+        }
+        max-width: 60rem;
+
+        span {
+            margin: {
+                bottom: 3.7rem;
+            }
+        }
+        @media only screen and (max-width: 1017px) {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: {
+        top: 4rem;
+    }
+
+    #hamburger {
+        display: none;
+
+        @media only screen and (max-width: 750px) {
+            display: block;
+        }
+    }
+
+    &-mobileMenu {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+
+        animation: blurAppear 0.3s ease-in-out;
+
+        &--header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin: {
+                left: 7vw;
+                right: 7vw;
+                top: 7rem;
+            }
+        }
+
+        &--title {
+            @include heading;
+            color: black;
+            font-size: 2rem;
+        }
+
+        &--links {
+            list-style: none;
+            margin: {
+                left: 7vw;
+                top: 7vw;
+            }
+
+            li {
+                &:not(:first-child) {
+                    margin: {
+                        top: 3rem;
+                    }
+                }
+
+                a,
+                a:link,
+                a:visited,
+                a:active {
+                    @include text;
+                    color: black;
+                    text-decoration: none;
+                    //font-weight: bold;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    &-nav {
+        @media only screen and (max-width: 750px) {
+            display: none;
+        }
+        list-style: none;
+
+        &--link {
+            @include text;
+            color: var(--color-text--secondary);
+            text-decoration: none;
+            margin-right: 5rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                z-index: 99;
+                border-bottom: 3px solid var(--color-primary);
+                transition: .2s all;
+                
+            }
+
+            &:hover {
+                &::after {
+                        width: 100%;
+                }
+            }
+
+        }
+
+        &--link_button {
+            @include text;
+            display: inline-block;
+            color: var(--color-text--secondary);
+            font-weight: var(--font-weight--heading);
+            text-decoration: none;
+            padding: 1rem 2.3rem;
+            background-color: var(--color-primary);
+            background-image: none;
+            border-radius: 14px;
+
+            transition: .2s all;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            &:active {
+                transform: scale(1);
+            }
+        }
+    }
+
+}

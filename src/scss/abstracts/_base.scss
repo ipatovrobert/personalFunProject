@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //FontSize set to 16px default;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
+.container {
+    flex-grow: 1;
+    margin: {
+        left: 5vw;
+        right: 5vw;
+    }
+}
+
+.single-line {
+    display: block !important;
+}
+
+.button {
+    @include text;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: var(--color-button);
+    border-radius: 14px;
+    padding: 1.4rem 5rem;
+    display: inline-block;
+    transition: .2s all;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.144);
+
+    @media only screen and (min-width: 750px) {
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.404);
+        }
+    
+        &:active {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.144);
+            transform: scale(1);
+        }
+    }
+}
+
+.line-above { 
+    padding-top: 2rem;
+    border-top: 5px solid var(--color-primary);
+}

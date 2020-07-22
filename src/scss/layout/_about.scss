@@ -1,0 +1,40 @@
+.about {
+
+    &-heading {
+        @include heading;
+        text-transform: uppercase;
+        margin: {
+            bottom: 15rem;
+        }
+    }
+
+    &-container {
+        max-width: 1332px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20vw;
+        row-gap: 7rem;
+        @media only screen and (max-width: 785px) {
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+
+
+        &--title {
+            @include heading;
+            margin: {
+                bottom: 3.5rem;
+            }
+        }
+        
+        &--description {
+            @include text;
+            line-height: 30px;
+            color: #656565;
+        }
+    }
+}

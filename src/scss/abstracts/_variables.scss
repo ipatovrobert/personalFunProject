@@ -1,0 +1,18 @@
+:root {
+    --font-primary: 'Montserrat', 'sans-serif';
+    --font-size--heading: 4rem;
+    --font-size--text: 2rem;
+    --font-size--small: 1.6rem;
+    --font-weight--heading: bold;
+    @media only screen and (max-width: 500px) {
+        --font-size--heading: 3rem;
+        --font-size--text: 1.6rem;
+    }
+
+    --color-text--primary: #000000;
+    --color-text--secondary: #ffffff;
+    --color-button: #098E75;
+    --color-primary: #11D2BA;
+    --color-containter: #FCFCFC;
+    --color-overlay: #00000099;
+}
